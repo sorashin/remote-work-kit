@@ -2,6 +2,8 @@
 title: Balcony Block
 date: "2015-05-06T23:46:37.121Z"
 description: "バルコニーがオフィス空間に早変わりするブロック群です"
+price: 11000
+ar_url: ./hirano_3.usdz
 ---
 
 Wow! I love blogging so much already.
