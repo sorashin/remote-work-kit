@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Top from '../components/Top'
 import "../styles.css"
+import { graphql } from "gatsby"
 
 // data
 const links = [
@@ -55,12 +56,13 @@ const paragraphStyles = {
   margin:0
 }
 // markup
-const IndexPage = () => {
+const IndexPage = ({data}) => {
   return (
     <Layout style={paragraphStyles}>
       <main>
         <Header/>
-        <Top links = {links}/>
+        <Top links = {links} data = {data}/>
+        <h1>{data.allMarkdownRemark.totalCount}</h1>
         <Footer/>
       </main>
     </Layout>
@@ -68,3 +70,23 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+
+export const query = graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            date
+            title
+          }
+          excerpt
+          timeToRead
+          html
+        }
+      }
+      totalCount
+    }
+  }
+`

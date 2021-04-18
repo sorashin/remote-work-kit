@@ -1,18 +1,15 @@
 import React from "react"
 import styled from 'styled-components'
-import logo from '../images/logo.png'
 
-export default function Top({links}) {
+
+export default function Top({links, data}) {
     return (
         <Container>
         <title>Home Page</title>
-        <h1>
-            Congratulations
-        </h1>
-        <a>リンクのテスト</a>
+        
+        <a>{data.allMarkdownRemark.totalCount}</a>
         <p>
-            Edit <code>src/pages/index.js</code> to see this page
-            update in real-time.{" "}
+            {" "}
             <span role="img" aria-label="Sunglasses smiley emoji"> 😎 </span>
         </p>
         <ul>
