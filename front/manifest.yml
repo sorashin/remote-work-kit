@@ -1,8 +1,8 @@
 ---
 applications:
 - name: remoteworkkit-shinakaj    # "ACCOUNTNAME"を自分の社員アカウント名に書き換えてください。例)miyasaka
-  memory: 64M
+  memory: 50M
   instances: 1
-  buildpack: nodejs_buildpack
+  buildpack: staticfile_buildpack
   path: ./public
   domain: sandbox.dev02.ssk.cfm.yahoo.co.jp
