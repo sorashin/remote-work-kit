@@ -7,7 +7,8 @@ export default function Top({links, data}) {
         <Container>
         <title>Home Page</title>
         
-        <a>{data.allMarkdownRemark.totalCount}</a>
+        <p>{data.allMarkdownRemark.totalCount}</p>
+        <div>{data.markdownRemark.frontmatter.title}</div>
         <p>
             {" "}
             <span role="img" aria-label="Sunglasses smiley emoji"> 😎 </span>

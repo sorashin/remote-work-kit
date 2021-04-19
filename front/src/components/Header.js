@@ -6,7 +6,7 @@ export default function Header({ children }) {
     return (
         <Wrap>
             <Container>
-                <Logo><img src={logo} /></Logo>
+                <Logo><img src={logo} alt='logo'/></Logo>
                 <Hint>初めての方へ</Hint>
             </Container>
         </Wrap>
@@ -37,5 +37,5 @@ const Logo = styled.a`
 `
 
 const Hint = styled.a`
-
+    
 `

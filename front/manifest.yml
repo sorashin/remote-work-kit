@@ -4,5 +4,5 @@ applications:
   memory: 64M
   instances: 1
   buildpack: nodejs_buildpack
-  path: .
+  path: ./public
   domain: sandbox.dev02.ssk.cfm.yahoo.co.jp

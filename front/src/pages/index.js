@@ -52,17 +52,16 @@ const links = [
     color: "#663399",
   }
 ]
-const paragraphStyles = {
-  margin:0
-}
+
 // markup
 const IndexPage = ({data}) => {
   return (
-    <Layout style={paragraphStyles}>
+    <Layout>
       <main>
         <Header/>
         <Top links = {links} data = {data}/>
         <h1>{data.allMarkdownRemark.totalCount}</h1>
+        <div>{data.markdownRemark.frontmatter.title}</div>
         <Footer/>
       </main>
     </Layout>
@@ -87,6 +86,19 @@ export const query = graphql`
         }
       }
       totalCount
+    }
+    markdownRemark {
+      fields {
+        slug
+      }
+      frontmatter {
+        description
+        price
+        title
+        ar_url {
+          absolutePath
+        }
+      }
     }
   }
 `
